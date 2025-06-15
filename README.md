@@ -19,12 +19,12 @@
   <div style="display: flex; justify-content: space-around; margin-top: 30px;">
     <div style="flex: 1; margin-right: 10px; text-align: center;">
       <h3>Giao diện đăng nhập</h3>
-      <img src="https://via.placeholder.com/400x300?text=Login+Screen" alt="Ảnh màn hình đăng nhập" style="max-width: 100%; border: 1px solid #ccc; border-radius: 8px;">
+      <img src="https://github.com/hiepnguyen05/TruyenFileRSAChuKySo/blob/main/Login.png?raw=true" alt="Ảnh màn hình đăng nhập" style="max-width: 100%; border: 1px solid #ccc; border-radius: 8px;">
       <p>Người dùng đăng nhập an toàn với danh sách tài khoản được hiển thị sẵn.</p>
     </div>
     <div style="flex: 1; margin-left: 10px; text-align: center;">
       <h3>Giao diện truyền file</h3>
-      <img src="https://via.placeholder.com/400x300?text=File+Transfer+Screen" alt="Ảnh giao diện truyền file" style="max-width: 100%; border: 1px solid #ccc; border-radius: 8px;">
+      <img src="https://github.com/hiepnguyen05/TruyenFileRSAChuKySo/blob/main/TrangChu.png?raw=true" alt="Ảnh giao diện truyền file" style="max-width: 100%; border: 1px solid #ccc; border-radius: 8px;">
       <p>Giao diện cho phép chọn người nhận, tải file và chữ ký, xem file nhận với trạng thái chữ ký và chữ ký base64.</p>
     </div>
   </div>
