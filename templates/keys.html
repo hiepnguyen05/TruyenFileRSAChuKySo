@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khóa Của Bạn</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col">
+    <header class="bg-blue-600 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">Khóa Của Bạn</h1>
+            <div>
+                <span class="mr-4">Xin chào, {{ username }}</span>
+                <a href="{{ url_for('logout') }}" class="text-white hover:underline">Đăng xuất</a>
+            </div>
+        </div>
+    </header>
+    
+    <main class="container mx-auto p-6 flex-grow">
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class="bg-green-100 border-l-4 border-green-500 text-green-700 p-4 mb-6" role="alert">
+                    {% for message in messages %}
+                        <p>{{ message }}</p>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+        
+        <div class="bg-white p-6 rounded-lg shadow-md mb-6">
+            <h2 class="text-xl font-semibold mb-4">Khóa Công Khai</h2>
+            <pre class="bg-gray-50 p-4 rounded-md text-sm overflow-auto">{{ public_key }}</pre>
+            <p class="text-gray-500 mt-2">Chia sẻ khóa này với người khác để họ gửi file mã hóa cho bạn.</p>
+        </div>
+        
+        <div class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-xl font-semibold mb-4">Khóa Bí Mật</h2>
+            <pre class="bg-gray-50 p-4 rounded-md text-sm overflow-auto">{{ private_key }}</pre>
+            <p class="text-red-500 mt-2">CẢNH BÁO: Không chia sẻ khóa này với bất kỳ ai!</p>
+        </div>
+        
+        <p class="mt-4 text-center"><a href="{{ url_for('index') }}" class="text-blue-600 hover:underline">Quay lại trang chính</a></p>
+    </main>
+    
+    <footer class="bg-gray-800 text-white p-4 text-center">
+        <p>© 2025 Truyền File An Toàn. All rights reserved.</p>
+    </footer>
+</body>
+</html>
